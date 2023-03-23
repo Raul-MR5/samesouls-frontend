@@ -1,0 +1,17 @@
+<div class="h-full ui-g">
+  <div class="h-full p-col-12">
+    <div class="h-full card card-w-title p-col-12">
+      <div class="flex justify-content-between py-3">
+        <h1 translate>paginas.log.title</h1>
+
+        <p-button
+          icon="pi pi-refresh"
+          (click)="getLogData()"
+          label="{{ 'buttons.refresh' | translate }}"></p-button>
+      </div>
+
+      <ngx-monaco-editor class="my-code-editor" [options]="editorOptions" [(ngModel)]="rawlist">
+      </ngx-monaco-editor>
+    </div>
+  </div>
+</div>

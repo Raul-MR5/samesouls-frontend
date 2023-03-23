@@ -1,0 +1,213 @@
+<p-dialog
+  [resizable]="false"
+  [modal]="true"
+  [maximizable]="true"
+  [(visible)]="visible"
+  (onHide)="onHide()"
+  [style]="{ width: '100%', maxWidth: '50rem' }">
+  <p-header>
+    <div *ngIf="loading$ | async">Cargando...</div>
+  </p-header>
+  <div class="grid p-fluid">
+    <form [formGroup]="form" (ngSubmit)="send()">
+      <p-card class="lg:col-12">
+        <span class="p-card-title">
+          Datos Personales
+          <hr />
+        </span>
+        <div class="grid">
+          <div class="md:col-6 lg:col-6">
+            <span class="p-float-label">
+              <input
+                type="text"
+                class="p-inputtext-sm"
+                [ngClass]="{
+                  'ng-invalid': form?.controls['username'].invalid,
+                  'ng-dirty': form?.controls['username'].dirty
+                }"
+                formControlName="username"
+                pInputText />
+              <label>{{ 'columns.username' | translate }} *</label>
+            </span>
+            <small *ngIf="!form?.controls['username'].valid" class="p-error">
+              {{ errores['username'] }}
+            </small>
+          </div>
+          <div class="md:col-6 lg:col-6">
+            <span class="p-float-label">
+              <input
+                type="text"
+                class="p-inputtext-sm"
+                [ngClass]="{
+                  'ng-invalid': form?.controls['correo'].invalid,
+                  'ng-dirty': form?.controls['correo'].dirty
+                }"
+                formControlName="correo"
+                pInputText />
+              <label>{{ 'columns.correo' | translate }} *</label>
+            </span>
+            <small *ngIf="!form?.controls['correo'].valid" class="p-error">
+              {{ errores['correo'] }}
+            </small>
+          </div>
+          <div class="md:col-6 lg:col-6">
+            <span class="p-float-label">
+              <input
+                type="text"
+                class="p-inputtext-sm"
+                [ngClass]="{
+                  'ng-invalid': form?.controls['nombre'].invalid,
+                  'ng-dirty': form?.controls['nombre'].dirty
+                }"
+                formControlName="nombre"
+                pInputText />
+              <label>{{ 'columns.nombre' | translate }} *</label>
+            </span>
+            <small *ngIf="!form?.controls['nombre'].valid" class="p-error">
+              {{ errores['nombre'] }}
+            </small>
+          </div>
+          <div class="md:col-6 lg:col-6">
+            <span class="p-float-label">
+              <input
+                type="text"
+                class="p-inputtext-sm"
+                [ngClass]="{
+                  'ng-invalid': form?.controls['apellidos'].invalid,
+                  'ng-dirty': form?.controls['apellidos'].dirty
+                }"
+                formControlName="apellidos"
+                pInputText />
+              <label>{{ 'columns.apellidos' | translate }} *</label>
+            </span>
+            <small *ngIf="!form?.controls['apellidos'].valid" class="p-error">
+              {{ errores['apellidos'] }}
+            </small>
+          </div>
+          <div class="col-12" *ngIf="creationMode">
+            <hr />
+          </div>
+
+          <div class="md:col-6 lg:col-6" *ngIf="creationMode">
+            <span class="p-float-label">
+              <input
+                type="password"
+                class="p-inputtext-sm"
+                [ngClass]="{
+                  'ng-invalid': form?.controls['password'].invalid,
+                  'ng-dirty': form?.controls['password'].dirty
+                }"
+                formControlName="password"
+                pInputText />
+              <label>{{ 'columns.password' | translate }} *</label>
+            </span>
+            <small *ngIf="!form?.controls['password'].valid" class="p-error">
+              {{ errores['password'] }}
+            </small>
+          </div>
+          <div class="md:col-6 lg:col-6" *ngIf="creationMode">
+            <span class="p-float-label">
+              <input
+                type="password"
+                class="p-inputtext-sm"
+                [ngClass]="{
+                  'ng-invalid': form?.controls['repeat_password'].invalid,
+                  'ng-dirty': form?.controls['repeat_password'].dirty
+                }"
+                formControlName="repeat_password"
+                pInputText />
+              <label>{{ 'columns.repeat_password' | translate }} *</label>
+            </span>
+            <small *ngIf="!form?.controls['repeat_password'].valid" class="p-error">
+              {{ errores['repeat_password'] }}
+            </small>
+          </div>
+          <div class="sm:col-12 md:col-6 lg:col-6" *ngIf="creationMode">
+            <small class="p-error">
+              {{ errores['passwordComp'] }}
+            </small>
+          </div>
+        </div>
+
+        <span translate class="p-card-title">
+          secciones.control
+          <hr />
+        </span>
+        <div class="grid form-group">
+          <div class="md:col-6">
+            <span class="p-float-label">
+              <input
+                type="text"
+                class="p-inputtext-sm"
+                [ngClass]="{
+                  'ng-invalid': form?.controls['fecAlta'].invalid,
+                  'ng-dirty': form?.controls['fecAlta'].dirty
+                }"
+                formControlName="fecAltaShow"
+                pInputText />
+              <label>{{ 'columns.fecAlta' | translate }} *</label>
+            </span>
+            <small *ngIf="!form?.controls['fecAlta'].valid" class="p-error">
+              {{ errores['fecAlta'] }}
+            </small>
+          </div>
+          <div class="md:col-6">
+            <span class=" ">
+              <span
+                [class]="
+                  'ml-5 usuario-badge status-' + (form.get('activo').value ? 'activo' : 'inactivo')
+                "
+                >{{
+                  (form.get('activo').value ? 'general.active' : 'general.inactive') | translate
+                }}</span
+              >
+            </span>
+          </div>
+          <div class="sm:col-12">
+            <span class="p-float-label">
+              <p-calendar
+                appendTo="body"
+                formControlName="fecBaja"
+                dateFormat="dd-mm-yy"
+                [showIcon]="true"
+                [showTime]="false"
+                (onSelect)="onChangeFecBaja($event)"
+                (onInput)="onInputFecBaja($event.target.value)">
+              </p-calendar>
+              <label>{{ 'columns.fecBaja' | translate }}</label>
+            </span>
+          </div>
+        </div>
+      </p-card>
+      <p-card class="lg:col-12">
+        <span translate class="p-card-title"
+          >secciones.permisos
+          <hr
+        /></span>
+        <div class="md:col-12">
+          <span class="">
+            <p-autoComplete
+              formControlName="rol"
+              field="codigo"
+              [suggestions]="filteredRoles"
+              (completeMethod)="filterRoles($event)"
+              [size]="5"
+              [minLength]="1"
+              placeholder="{{ 'tables.rol.plural' | translate }}"
+              [dropdown]="true">
+              <ng-template let-rol pTemplate="item">
+                {{ rol.codigo }}
+              </ng-template>
+            </p-autoComplete>
+          </span>
+          <small *ngIf="!form?.controls['rol'].valid" class="p-error">
+            {{ errores['rol'] }}
+          </small>
+        </div>
+      </p-card>
+      <div class="button-container">
+        <button pButton type="submit" label="Enviar"></button>
+      </div>
+    </form>
+  </div>
+</p-dialog>

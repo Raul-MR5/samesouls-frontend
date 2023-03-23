@@ -1,0 +1,107 @@
+<p-dialog
+  [resizable]="false"
+  [modal]="true"
+  [maximizable]="true"
+  [(visible)]="visible"
+  (onHide)="onHide()"
+  [style]="{ width: '100%', maxWidth: '50rem' }">
+  <div class="loading-modal p-component-overlay" *ngIf="loading$ | async">
+    <i class="pi pi-spin pi-spinner"></i>
+  </div>
+
+  <div class="grid p-fluid">
+    <form [formGroup]="form" (ngSubmit)="send()" class="col-12 p-3">
+      <div class="grid">
+        <div class="xs:col-12 md:col-6 lg:col-6">
+          <span class="p-float-label">
+            <p-dropdown
+              [autoDisplayFirst]="false"
+              class="p-inputtext-sm"
+              appendTo="body"
+              [filter]="true"
+              [ngClass]="{
+                'ng-invalid': form?.controls['menu'].invalid,
+                'ng-dirty': form?.controls['menu'].dirty
+              }"
+              [showClear]="true"
+              formControlName="menu"
+              [options]="menus"
+              optionLabel="nombre">
+            </p-dropdown>
+            <label>{{'tables.menu.singular' | translate}} {{ 'menu' | isRequired: form  }}</label>
+          </span>
+
+          <small *ngIf="!form?.controls['menu'].valid" class="p-error">
+            {{ errores['menu'] }}
+          </small>
+        </div>
+        <div class="xs:col-12 lg:col-6">
+          <span class="p-float-label">
+            <input
+              type="text"
+              class="p-inputtext-sm md:col-12 lg:col-12"
+              [ngClass]="{
+                'ng-invalid': form?.controls['icono'].invalid,
+                'ng-dirty': form?.controls['icono'].dirty
+              }"
+              formControlName="icono"
+              pInputText />
+            <label>{{ 'columns.icono' | translate }} {{ 'icono' | isRequired: form  }}</label>
+          </span>
+          <small *ngIf="!form?.controls['icono'].valid" class="p-error">
+            {{ errores['icono'] }}
+          </small>
+        </div>
+        <div class="xs:col-12 lg:col-6">
+          <span class="p-float-label">
+            <input
+              type="text"
+              class="p-inputtext-sm md:col-12 lg:col-12"
+              [ngClass]="{
+                'ng-invalid': form?.controls['nombre'].invalid,
+                'ng-dirty': form?.controls['nombre'].dirty
+              }"
+              formControlName="nombre"
+              pInputText />
+            <label>{{ 'columns.nombre' | translate }} {{ 'nombre' | isRequired: form  }}</label>
+          </span>
+          <small *ngIf="!form?.controls['nombre'].valid" class="p-error">
+            {{ errores['nombre'] }}
+          </small>
+        </div>
+        <div class="xs:col-12 lg:col-6">
+          <span class="p-float-label">
+            <p-inputNumber
+              class="p-inputtext-sm"
+              formControlName="orden"
+              [ngClass]="{
+                'ng-invalid': form?.controls['orden'].invalid,
+                'ng-dirty': form?.controls['orden'].dirty
+              }"></p-inputNumber>
+            <label>{{ 'columns.orden' | translate }} {{ 'orden' | isRequired: form  }}</label>
+            <small *ngIf="!form?.controls['orden'].valid" class="p-error">
+              {{ errores['orden'] }}
+            </small>
+          </span>
+        </div>
+        <div class="xs:col-12 lg:col-12">
+          <span class="p-float-label">
+            <input
+              type="text"
+              class="p-inputtext-sm md:col-12 lg:col-12"
+              [ngClass]="{ 'ng-dirty': !form?.controls['ruta'].valid }"
+              formControlName="ruta"
+              pInputText />
+            <label>{{ 'columns.ruta' | translate }} {{ 'ruta' | isRequired: form  }}</label>
+            <small *ngIf="!form?.controls['ruta'].valid" class="p-error">
+              {{ errores['ruta'] }}
+            </small>
+          </span>
+        </div>
+      </div>
+      <div class="button-container">
+        <button pButton type="submit" label="Enviar"></button>
+      </div>
+    </form>
+  </div>
+</p-dialog>

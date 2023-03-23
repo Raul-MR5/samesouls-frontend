@@ -1,0 +1,293 @@
+{
+  "paginas": {
+    "login": {
+      "titulo": "INICIO DE SESIÓN",
+      "subtitulo": "Bienvenido a {{name}}",
+      "navegacion": "¿Has olvidado tu contraseña?",
+      "success": "Has iniciado sesión con éxito",
+      "error": "Error al iniciar sesión!",
+      "enviar": "Iniciar Sesión"
+    },
+    "recuperarPassword": {
+      "titulo": "RECUPERAR CONTRASEÑA",
+      "subtitulo": "Introduce tu correo electronico",
+      "navegacion": "Volver",
+      "success": "Correo de recuperación enviado con éxito",
+      "error": "Error al enviar el correo de recuperación!",
+      "enviar": "Enviar Correo"
+    },
+    "formularioRecuperacion": {
+      "titulo": "FORMULARIO RECUPERACIÓN",
+      "subtitulo": "Introduce tu nueva contraseña",
+      "navegacion": "Volver",
+      "success": "Contraseña cambiada con éxito",
+      "error": "Error al cambiar la contraseña!",
+      "enviar": "Cambiar Contraseña",
+      "equalPasswordError": "Ambas contraseñas deben de ser iguales"
+    },
+    "logger": {
+      "title": "Logger"
+    },
+    "config": {
+      "title": "CONFIGURACIÓN GLOBAL",
+      "info": "Información Principal",
+      "token": "Token",
+      "languages": "Idiomas",
+      "table": "Tablas",
+      "politics": "Políticas",
+      "model": {
+        "favicon": "Favicon",
+        "nombre": "Nombre",
+        "logo": "Logo",
+        "tokenExpiration": "Expiración del token",
+        "passwordResetTokenExpiration": "Expiración del token de recuperación de contraseña",
+        "tokenSecretKey": "Clave secreta del token",
+        "paginators": "Paginadores",
+        "paginator": "Paginador por defecto",
+        "languages": "Idiomas",
+        "language": "Idioma por defecto",
+        "privacyPolicies": "Políticas de Privacidad",
+        "cookiePolicies": "Políticas de cookies",
+        "legalWarning": "Aviso legal"
+      }
+    },
+    "log": {
+      "title": "Logger"
+    }
+  },
+  "errors": {
+    "url": "/",
+    "urlText": "Ir a la página principal",
+    "types": {
+      "ERROR": {
+        "title": "ERROR",
+        "subtitle": "Algo no ha ido bien",
+        "text": ""
+      },
+      "ERROR_404": {
+        "title": "ERROR 404",
+        "subtitle": "Página no encontrada",
+        "text": "La página que estás buscando no existe o no está disponible en este momento"
+      },
+      "ERROR_500": {
+        "title": "ERROR 500",
+        "subtitle": "Error en el servidor",
+        "text": "Probablemente el problema no sea con tu ordenador o conexión a internet sino con el servidor"
+      }
+    }
+  },
+  "messages": {
+    "headers": {
+      "success": "Éxito",
+      "warning": "Advertencia",
+      "info": "Información",
+      "error": "Error"
+    },
+    "confirmation": {
+      "message": "¿Quieres borrar el/la {{name}}?",
+      "header": "Confirmación de Borrado"
+    },
+    "toastDeleted": "El/la {{name}} ha sido borrado correctamente",
+    "toastCreated": "El/la {{name}} ha sido creado correctamente",
+    "toastUpdated": "El/la {{name}} ha sido modificado correctamente",
+    "toastError": "ERR"
+  },
+  "buttons": {
+    "detail": "Ver {{name}}",
+    "new": "Nuevo/a {{name}}",
+    "create": "Crear {{name}}",
+    "add": "Añadir {{name}}",
+    "edit": "Modificar {{name}}",
+    "update": "Modificar {{name}}",
+    "delete": "Borrar {{name}}",
+    "send": "Enviar {{name}}",
+    "open": "Abrir",
+    "refresh": "Refrescar",
+    "reject": "No",
+    "accept": "Si",
+    "next": "Siguiente",
+    "previus": "Anterior"
+  },
+  "steps": {
+    "informacion": "Información Principal",
+    "imagenes": "Imágenes",
+    "intervenciones": "Intervenciones",
+    "edificios": "Edificios",
+    "fin": "Fin"
+  },
+  "general": {
+    "reordenar": "Reordenar",
+    "opciones": "Opciones",
+    "inactive": "Inactivo/a",
+    "active": "Activo/a",
+    "passwordComp": "Tienen que ser iguales",
+    "total": "Total",
+    "de": "de",
+    "pagina": "Pagina",
+    "salir": "Salir",
+    "translations": "Traducciones: {{name}}",
+    "ningunResultado": "Ningún Elemento Encontrado"
+  },
+  "tabs": {
+    "info": "Información Principal",
+    "fotos": "Fotos",
+    "edificios": "Edificios",
+    "intervenciones": "Intervenciones"
+  },
+  "secciones": {
+    "informacionPrincipal": "Información Principal",
+    "otraInformacion": "Otra Información",
+    "fotos": "Fotos",
+    "ubicacion": "Ubicación",
+    "control": "Control",
+    "permisos": "Permisos"
+  },
+  "tables": {
+    "permiso": {
+      "singular": "Permiso",
+      "plural": "Permisos"
+    },
+    "menu": {
+      "singular": "Menu",
+      "plural": "Menus"
+    },
+    "intervencion": {
+      "singular": "Intervención",
+      "plural": "Intervenciones"
+    },
+    "foto": {
+      "singular": "Foto",
+      "plural": "Fotos"
+    },
+    "arquitecto": {
+      "singular": "Arquitecto",
+      "plural": "Arquitectos"
+    },
+    "tipoItinerario": {
+      "singular": "Tipo de Itinerario",
+      "plural": "Tipos de Itinerarios"
+    },
+    "itinerario": {
+      "singular": "Itinerario",
+      "plural": "Itinerarios"
+    },
+    "evento": {
+      "singular": "Evento",
+      "plural": "Eventos"
+    },
+    "indicadorVisual": {
+      "singular": "Indicador Visual",
+      "plural": "Indicadores Visuales"
+    },
+    "periodo": {
+      "singular": "Periodo",
+      "plural": "Periodos"
+    },
+    "tag": {
+      "singular": "Etiqueta",
+      "plural": "Etiquetas"
+    },
+    "tipoBien": {
+      "singular": "Tipo de Bien",
+      "plural": "Tipos de Bienes"
+    },
+    "tipologia": {
+      "singular": "Tipologia",
+      "plural": "Tipologias"
+    },
+    "estiloArquitectonico": {
+      "singular": "Estilo Arquitectónico",
+      "plural": "Estilos Arquitectónicos"
+    },
+    "edificio": {
+      "singular": "Edificio",
+      "plural": "Edificios"
+    },
+    "edificioItinerario": {
+      "singular": "Edificio asociado al Itinerario",
+      "plural": "Edificios asociadso a los Itinerarios"
+    },
+    "user": {
+      "singular": "Usuario",
+      "plural": "Usuarios"
+    },
+    "rol": {
+      "singular": "Rol",
+      "plural": "Roles"
+    }
+  },
+  "columns": {
+    "codigo": "Código",
+    "descripcion": "Descripción",
+    "icono": "Icono",
+    "nombre": "Nombre",
+    "orden": "Orden",
+    "ruta": "Ruta",
+    "edificio": "Edificio",
+    "fechaProyecto": "Fecha Proyecto",
+    "fechaInicio": "Fecha Inicio",
+    "fechaFin": "Fecha Fin",
+    "arquitectos": "Arquitectos",
+    "apellidos": "Apellidos",
+    "tipoItinerario": "Tipo de Itinerario",
+    "fotoPrincipal": "Foto Principal",
+    "edificios": "Edificios",
+    "enlaceWeb": "Enlace Web",
+    "tags": "Etiquetas",
+    "periodo": "Periodo",
+    "estiloArquitectonico": "Estilo Arquitectónico",
+    "tipologia": "Tipologia",
+    "premios": "Premios",
+    "direccion": "Dirección",
+    "geoLongitud": "Georeferenciación Longitud",
+    "geoLatitud": "Georeferenciación Latitud",
+    "otros": "Otros",
+    "indicadorVisual": "Indicador Visual",
+    "username": "Usuario",
+    "password": "Contraseña",
+    "repeat_password": "Repetir Contraseña",
+    "correo": "Correo",
+    "activo": "Activo",
+    "fecAlta": "Fecha de Alta",
+    "fecBaja": "Fecha de Baja",
+    "rol": "Rol",
+    "permisos": "Permisos"
+  },
+  "calendar": {
+    "accept": "Aceptar",
+    "reject": "Cancelar",
+    "dayNames": ["Domingo", "Lunes", "Martes", "Miércoles", "Jueves", "Viernes", "Sábado"],
+    "dayNamesShort": ["dom", "lun", "mar", "mié", "jue", "vie", "sáb"],
+    "dayNamesMin": ["D", "L", "M", "X", "J", "V", "S"],
+    "monthNames": [
+      "Enero",
+      "Febrero",
+      "Marzo",
+      "Abril",
+      "Mayo",
+      "Junio",
+      "Julio",
+      "Agosto",
+      "Septiembre",
+      "Octubre",
+      "Noviembre",
+      "Diciembre"
+    ],
+    "monthNamesShort": [
+      "ene",
+      "feb",
+      "mar",
+      "abr",
+      "may",
+      "jun",
+      "jul",
+      "ago",
+      "sep",
+      "oct",
+      "nov",
+      "dic"
+    ],
+    "today": "Hoy",
+    "clear": "Borrar"
+  }
+}

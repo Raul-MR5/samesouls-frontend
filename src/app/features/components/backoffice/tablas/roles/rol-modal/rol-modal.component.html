@@ -1,0 +1,74 @@
+<p-dialog
+  [resizable]="false"
+  [modal]="true"
+  [maximizable]="true"
+  [(visible)]="visible"
+  (onHide)="onHide()"
+  [style]="{ width: '100%', maxWidth: '80rem' }">
+  <div class="loading-modal p-component-overlay" *ngIf="loading$ | async">
+    <i class="pi pi-spin pi-spinner"></i>
+  </div>
+
+  <div class="grid p-fluid">
+    <form [formGroup]="form" (ngSubmit)="send()" class="col-12 p-3">
+      <div class="grid">
+        <div class="xs:col-6 lg:col-6">
+          <span class="p-float-label">
+            <input
+              type="text"
+              class="p-inputtext-sm"
+              [ngClass]="{
+                'ng-invalid': form?.controls['codigo'].invalid,
+                'ng-dirty': form?.controls['codigo'].dirty
+              }"
+              formControlName="codigo"
+              pInputText />
+            <label>{{ 'columns.codigo' | translate }} {{ 'codigo' | isRequired: form }}</label>
+          </span>
+          <small *ngIf="!form?.controls['codigo'].valid" class="p-error">
+            {{ errores['codigo'] }}
+          </small>
+        </div>
+        <div class="xs:col-6 lg:col-6">
+          <span class="p-float-label">
+            <p-multiSelect
+              appendTo="body"
+              [options]="permisos"
+              formControlName="permisos"
+              class="p-multiselect-sm"
+              optionLabel="codigo">
+            </p-multiSelect>
+
+            <label>{{ 'columns.permisos' | translate }} {{ 'permisos' | isRequired: form  }}</label>
+          </span>
+          <small *ngIf="!form?.controls['permisos'].valid" class="p-error">
+            {{ errores['permisos'] }}
+          </small>
+        </div>
+        <div class="xs:col-12 lg:col-12">
+          <span class="p-float-label">
+            <textarea
+              style="min-height: 200px"
+              pInputTextarea
+              formControlName="descripcion"
+              [ngClass]="{
+                'ng-invalid': form?.controls['descripcion'].invalid,
+                'ng-dirty': form?.controls['descripcion'].dirty
+              }"></textarea>
+
+            <label
+              >{{ 'columns.descripcion' | translate }}
+              {{ 'descripcion' | isRequired: form  }}</label
+            >
+          </span>
+          <small *ngIf="!form?.controls['descripcion'].valid" class="p-error">
+            {{ errores['descripcion'] }}
+          </small>
+        </div>
+      </div>
+      <div class="button-container">
+        <button pButton type="submit" label="Enviar"></button>
+      </div>
+    </form>
+  </div>
+</p-dialog>

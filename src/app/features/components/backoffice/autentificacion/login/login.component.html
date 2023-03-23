@@ -1,0 +1,78 @@
+<div class="login-body" id="login-body">
+  <app-language-select></app-language-select>
+  <div class="login-panel p-fluid">
+    <div class="custom-login-header grid">
+      <div class="col-9">
+        <h1>{{ 'paginas.login.titulo' | translate }}</h1>
+        <h2>{{ 'paginas.login.subtitulo' | translate : { name: nombre } }}</h2>
+      </div>
+      <div class="col-3">
+        <img [src]="logoUrl" />
+      </div>
+    </div>
+    <form [formGroup]="form" (ngSubmit)="login()">
+      <div class="p-fluid">
+        <div class="xs:col-12 lg:col-12">
+          <div class="p-float-label">
+            <input
+              pInputText
+              (change)="inputChange($event)"
+              name="username"
+              type="text"
+              formControlName="username"
+              [ngClass]="{
+                'ng-invalid': form?.controls['username'].invalid,
+                'ng-dirty': form?.controls['username'].dirty
+              }" />
+            <label for="username">{{ 'columns.username' | translate }}</label>
+          </div>
+          <small *ngIf="!form?.controls['username'].valid" class="p-error">
+            {{ errores['username'] }}
+          </small>
+        </div>
+        <div class="xs:col-12 lg:col-12">
+          <div class="p-float-label">
+            <input
+              type="password"
+              formControlName="password"
+              pInputText
+              [ngClass]="{
+                'ng-invalid': form?.controls['password'].invalid,
+                'ng-dirty': form?.controls['password'].dirty
+              }" />
+            <label for="password">{{ 'columns.password' | translate }}</label>
+          </div>
+          <small *ngIf="!form?.controls['password'].valid" class="p-error">
+            {{ errores['password'] }}
+          </small>
+        </div>
+        <div class="xs:col-12 lg:col-12">
+          <div class="button-container-login">
+            <button
+              *ngIf="!loading"
+              [disabled]="form.invalid"
+              pButton
+              type="submit"
+              [label]="'paginas.login.enviar' | translate"
+              icon="ui-icon-person"
+              style="width: 100%"></button>
+            <button
+              *ngIf="loading"
+              [disabled]="form.invalid"
+              pButton
+              type="submit"
+              [label]="'paginas.login.enviar' | translate"
+              icon="pi pi-spin pi-spinner"
+              style="width: 100%"></button>
+            <a
+              [routerLink]="['/backoffice/recuperar-password']"
+              class="my-5"
+              style="font-size: 12px"
+              >{{ 'paginas.login.navegacion' | translate }}</a
+            >
+          </div>
+        </div>
+      </div>
+    </form>
+  </div>
+</div>

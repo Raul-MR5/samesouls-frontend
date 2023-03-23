@@ -1,0 +1,18 @@
+<div class="ui-g">
+  <div class="p-col-12">
+    <div class="card card-w-title">
+      <h1 translate>tables.menu.plural</h1>
+      <app-tabla-generica
+        [entities]="entities$ | async"
+        [loading]="loading$ | async"
+        [totalRecords]="count$ | async"
+        [permisos]="[]"
+        [tableConfig]="tableConfig"
+        [(requestFilter)]="requestFilter"
+        (loadAll)="getAll()"
+        (onButtonClick)="onClick($event)">
+      </app-tabla-generica>
+    </div>
+  </div>
+</div>
+<app-menu-modal></app-menu-modal>

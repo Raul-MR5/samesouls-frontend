@@ -1,0 +1,44 @@
+<p-dialog
+  [resizable]="false"
+  [modal]="true"
+  [maximizable]="true"
+  [(visible)]="visible"
+  (onHide)="onHide()"
+  [style]="{ width: '100%', maxWidth: '50em' }">
+  <div class="loading-modal p-component-overlay" *ngIf="loading$ | async">
+    <i class="pi pi-spin pi-spinner"></i>
+  </div>
+  <div class="grid p-fluid">
+    <form [formGroup]="form" (ngSubmit)="send()" class="col-12 p-3">
+      <div class="grid col-12">
+        <!-- <div class="xs:col-12 lg:col-6">
+            <span class="p-float-label">
+              <input type="text" class="p-inputtext-sm col-12"
+                [ngClass]="{'ng-invalid': form?.controls['nombre'].invalid, 'ng-dirty':
+                form?.controls['nombre'].dirty}" formControlName="nombre" pInputText>
+              <label>{{'columns.nombre' | translate}} *</label>
+
+            </span>
+            <small *ngIf="!form?.controls['nombre'].valid " class="p-error">
+              {{errores['nombre']}}
+            </small>
+          </div>
+          <div class="xs:col-12 lg:col-6">
+            <span class="p-float-label">
+              <input type="text" class="p-inputtext-sm col-12"
+                [ngClass]="{'ng-invalid': form?.controls['apellidos'].invalid, 'ng-dirty':
+                form?.controls['apellidos'].dirty}" formControlName="apellidos" pInputText>
+              <label>{{'columns.apellidos' | translate}} *</label>
+
+            </span>
+            <small *ngIf="!form?.controls['apellidos'].valid " class="p-error">
+              {{errores['apellidos']}}
+            </small>
+          </div> -->
+        <div class="button-container col-12">
+          <button class="col-12" pButton type="submit" label="Enviar"></button>
+        </div>
+      </div>
+    </form>
+  </div>
+</p-dialog>

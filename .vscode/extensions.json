@@ -1,0 +1,12 @@
+{
+  "recommendations": [
+    "Angular.ng-template",
+    "cyrilletuzi.angular-schematics",
+    "vivaxy.vscode-conventional-commits",
+    "fabiospampinato.vscode-terminals",
+    "dbaeumer.vscode-eslint",
+    "eamodio.gitlens",
+    "christian-kohler.npm-intellisense",
+    "esbenp.prettier-vscode"
+  ]
+}

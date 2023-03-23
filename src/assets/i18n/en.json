@@ -1,0 +1,196 @@
+{
+  "paginas": {
+    "login": {
+      "titulo": "LOGIN",
+      "subtitulo": "Welcome to {{name}}",
+      "navegacion": "have you forgotten your password?",
+      "success": "You have successfully logged in",
+      "error": "Failed to login!",
+      "enviar": "Log in",
+      "model": {
+        "username": "Username",
+        "password": "Password"
+      }
+    },
+    "recuperarPassword": {
+      "titulo": "RECOVER PASSWORD",
+      "subtitulo": "Enter your email",
+      "navegacion": "Return",
+      "success": "Recovery email sent successfully",
+      "error": "Error sending recovery email!",
+      "enviar": "Send mail",
+      "model": {
+        "correo": "Mail"
+      }
+    },
+    "formularioRecuperacion": {
+      "titulo": "RECOVERY FORM",
+      "subtitulo": "Enter your new password",
+      "navegacion": "Return",
+      "success": "Password changed successfully",
+      "error": "Failed to change password!",
+      "enviar": "Change Password",
+      "equalPasswordError": "Both passwords must be the same",
+      "model": {
+        "password": "New Password",
+        "repeat_password": "Repeat New Password"
+      }
+    },
+    "log": {
+      "title": "Logger"
+    }
+  },
+  "errors": {
+    "url": "/",
+    "urlText": "Go to the main page",
+    "types": {
+      "ERROR": {
+        "title": "ERROR",
+        "subtitle": "Something has gone wrong",
+        "text": ""
+      },
+      "ERROR_404": {
+        "title": "ERROR 404",
+        "subtitle": "Page not found",
+        "text": "The page you are looking for does not exist or is not available at the moment"
+      },
+      "ERROR_500": {
+        "title": "ERROR 500",
+        "subtitle": "Internal Server Error",
+        "text": "The problem is probably not with your computer or internet connection but with the server"
+      }
+    }
+  },
+  "messages": {
+    "confirmation": {
+      "message": "¿Do you want to delete the {{name}}?",
+      "header": "Delete Confirmation",
+      "rejectLabel": "No",
+      "acceptLabel": "Si"
+    },
+    "toastDelete": "The {{name}} has been successfully deleted",
+    "toastSuccess": "The {{name}} has been successfully created",
+    "toastUpdate": "The {{name}} has been successfully modified"
+  },
+  "buttons": {
+    "detail": "See {{name}}",
+    "new": "New/a {{name}}",
+    "create": "Create {{name}}",
+    "add": "Add {{name}}",
+    "edit": "Update {{name}}",
+    "update": "Update {{name}}",
+    "delete": "Delete {{name}}",
+    "send": "Send {{name}}",
+    "open": "Open",
+    "refresh": "Refresh",
+    "reject": "No",
+    "accept": "Yes",
+    "next": "Next",
+    "previus": "Previus"
+  },
+  "steps": {
+    "informacion": "Main Information",
+    "imagenes": "Images",
+    "intervenciones": "Interventions",
+    "edificios": "Buildings",
+    "fin": "The End"
+  },
+  "tabs": {
+    "info": "Main information",
+    "fotos": "Photos",
+    "edificios": "Buildings",
+    "intervenciones": "Interventions"
+  },
+  "secciones": {
+    "informacionPrincipal": "Main information",
+    "otraInformacion": "Other information",
+    "fotos": "Photos",
+    "ubicacion": "Location",
+    "control": "Control",
+    "permisos": "Permissions"
+  },
+  "tables": {
+    "permiso": {
+      "singular": "Permission",
+      "plural": "Permissions"
+    },
+    "menu": {
+      "singular": "Menu",
+      "plural": "Menus"
+    },
+    "user": {
+      "singular": "User",
+      "plural": "Users"
+    },
+    "rol": {
+      "singular": "Rol",
+      "plural": "Roles"
+    }
+  },
+  "columns": {
+    "codigo": "Code",
+    "descripcion": "Description",
+    "icono": "Icon",
+    "nombre": "Name",
+    "orden": "Order",
+    "username": "User",
+    "password": "Password",
+    "repeat_password": "Repeat password",
+    "correo": "Mail",
+    "activo": "Asset",
+    "fecAlta": "Discharge Date",
+    "fecBaja": "Discharge Date",
+    "rol": "Rol",
+    "permisos": "Permissions"
+  },
+  "general": {
+    "reordenar": "Rearrange",
+    "opciones": "Options",
+    "inactive": "Inactive",
+    "active": "Active",
+    "passwordComp": "They have to be the same",
+    "total": "Total",
+    "de": "of",
+    "pagina": "Page",
+    "salir": "Go out",
+    "translations": "Translations: {{name}}",
+    "ningunResultado": "No Item Found"
+  },
+  "calendar": {
+    "accept": "Accept",
+    "reject": "Reject",
+    "dayNames": ["Sunday", "Monday", "Tuesday", "Wednesday", "Thursday", "Friday", "Saturday"],
+    "dayNamesShort": ["sun", "mon", "tue", "wed", "thu", "fri", "sat"],
+    "dayNamesMin": ["D", "L", "M", "X", "J", "V", "S"],
+    "monthNames": [
+      "January",
+      "February",
+      "March",
+      "April",
+      "May",
+      "June",
+      "July",
+      "August",
+      "September",
+      "October",
+      "November",
+      "December"
+    ],
+    "monthNamesShort": [
+      "jan",
+      "feb",
+      "mar",
+      "apr",
+      "may",
+      "jun",
+      "jul",
+      "aug",
+      "sep",
+      "oct",
+      "nov",
+      "dec"
+    ],
+    "today": "Today",
+    "clear": "Delete"
+  }
+}

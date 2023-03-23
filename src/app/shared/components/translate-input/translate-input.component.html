@@ -1,0 +1,110 @@
+<div class="translate-input" [ngClass]="{ textarea: type === 'TEXTAREA' }">
+  <div class="p-inputgroup">
+    <p-dropdown
+      [disabled]="disabled"
+      class="p-inputtext-sm language-dropdown"
+      appendTo="body"
+      [options]="languages"
+      [(ngModel)]="language">
+      <ng-template pTemplate="selectedItem">
+        <div class="language-item language-item-value" *ngIf="language">
+          <div class="banderita">
+            <span class="" [class]="'flag flag-' + language.siglas"></span>
+          </div>
+          <div class="nombre">{{ language.siglas | uppercase }}</div>
+        </div>
+      </ng-template>
+      <ng-template let-language pTemplate="item">
+        <div class="language-item">
+          <div class="banderita">
+            <span class="" [class]="'flag flag-' + language.siglas"></span>
+          </div>
+          <div class="nombre">{{ language.siglas | uppercase }}</div>
+        </div>
+      </ng-template>
+    </p-dropdown>
+    <span class="p-float-label">
+      <input
+        [disabled]="disabled"
+        (input)="onActualTranslationChange($event)"
+        type="text"
+        [value]="getActualTranslation()"
+        pInputText
+        class="p-inputtext-sm"
+        [ngClass]="{
+          'ng-invalid': getActualTranslationInvalid(),
+          'ng-dirty': getActualTranslationDirty()
+        }" />
+
+      <!-- [placeholder]="'columns.' + fieldName | translate" -->
+      <label>{{ 'columns.' + fieldName | translate }} *</label>
+    </span>
+    <button
+      [disabled]="disabled"
+      class="p-inputtext-sm"
+      type="button"
+      pButton
+      pRipple
+      icon="pi pi-list"
+      (click)="changeVisibility(true)"></button>
+  </div>
+
+  <p-sidebar [autoZIndex]="true" [visible]="visibility" position="right" (onHide)="onHide()">
+    <div class="pl-2">
+      <h4>
+        {{ 'general.translations' | translate : { name: ('columns.' + fieldName | translate) } }}
+      </h4>
+    </div>
+    <div [formGroup]="form">
+      <ng-container formArrayName="translations">
+        <div
+          *ngFor="let translationForm of translations?.controls; let i = index"
+          [formGroup]="translationForm">
+          <div class="xs:col-12 lg:col-12">
+            <div class="p-inputgroup" *ngIf="type === 'INPUT'">
+              <span class="p-inputgroup-addon">
+                <span
+                  class=""
+                  [class]="'flag flag-' + translationForm.get('language').value.siglas"></span>
+                <div class="pl-1">
+                  <b>{{ translationForm.get('language').value.siglas | uppercase }}</b>
+                </div>
+              </span>
+
+              <input
+                type="text"
+                pInputText
+                [placeholder]="'columns.' + fieldName | translate"
+                formControlName="translation"
+                class="p-inputtext-sm"
+                [ngClass]="{
+                  'ng-invalid': translationForm.controls['translation'].invalid,
+                  'ng-dirty': translationForm.controls['translation'].dirty
+                }" />
+            </div>
+            <div class="p-inputgroup" *ngIf="type === 'TEXTAREA'">
+              <span class="p-inputgroup-addon">
+                <span
+                  class=""
+                  [class]="'flag flag-' + translationForm.get('language').value.siglas"></span>
+                <div class="pl-1">
+                  <b>{{ translationForm.get('language').value.siglas | uppercase }}</b>
+                </div>
+              </span>
+              <textarea
+                [ngClass]="{
+                  'ng-invalid': translationForm.controls['translation'].invalid,
+                  'ng-dirty': translationForm.controls['translation'].dirty
+                }"
+                [placeholder]="'columns.' + fieldName | translate"
+                rows="5"
+                cols="30"
+                formControlName="translation"
+                pInputTextarea></textarea>
+            </div>
+          </div>
+        </div>
+      </ng-container>
+    </div>
+  </p-sidebar>
+</div>

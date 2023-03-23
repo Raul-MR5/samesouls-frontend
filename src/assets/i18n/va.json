@@ -1,0 +1,202 @@
+{
+  "paginas": {
+    "login": {
+      "titulo": "INICI DE SESSIÓ",
+      "subtitulo": "Benvingut a {{name}}",
+      "navegacion": "Heu oblidat la vostra contrasenya?",
+      "success": "Heu iniciat sessió amb èxit",
+      "error": "Error en iniciar sessió!",
+      "enviar": "Iniciar Sessió"
+    },
+    "recuperarPassword": {
+      "titulo": "RECUPERAR CONTRASENYA",
+      "subtitulo": "Introdueix el teu correu electrònic",
+      "navegacion": "Tornar",
+      "success": "Correu de recuperació enviat amb èxit",
+      "error": "Error en enviar el correu de recuperació!",
+      "enviar": "Enviar Correu"
+    },
+    "formularioRecuperacion": {
+      "titulo": "FORMULARI RECUPERACIÓ",
+      "subtitulo": "Introdueix la teva nova contrasenya",
+      "navegacion": "Tornar",
+      "success": "Contrasenya canviada amb èxit",
+      "error": "Error al cambiar la contraseña!",
+      "enviar": "Canviar Contrasenya",
+      "equalPasswordError": "Ambdues contrasenyes deuen ser iguals"
+    },
+    "logger": {
+      "title": "Logger"
+    },
+    "config": {
+      "title": "CONFIGURACIÓ GLOBAL",
+      "info": "Informació Principal",
+      "token": "Token",
+      "languages": "Idiomes",
+      "table": "Taules",
+      "politics": "Polítiques",
+      "model": {
+        "favicon": "Favicon",
+        "nombre": "Nom",
+        "logo": "Logo",
+        "tokenExpiration": "Expiració del token",
+        "passwordResetTokenExpiration": "Expiració del token de recuperació de contrasenya",
+        "tokenSecretKey": "Clau secreta del token",
+        "paginators": "Paginadors",
+        "paginator": "Paginador per defecte",
+        "languages": "Idiomes",
+        "language": "Idioma per defecte",
+        "privacyPolicies": "Polítiques de Privadesa",
+        "cookiePolicies": "Polítiques de cookies",
+        "legalWarning": "Avís legal"
+      }
+    },
+    "log": {
+      "title": "Logger"
+    }
+  },
+  "errors": {
+    "url": "/",
+    "urlText": "Anar a la pàgina principal",
+    "types": {
+      "ERROR": {
+        "title": "ERROR",
+        "subtitle": "Alguna cosa no ha anat bé",
+        "text": ""
+      },
+      "ERROR_404": {
+        "title": "ERROR 404",
+        "subtitle": "Pàgina no trobada",
+        "text": "La pàgina que cerques no existeix o no està disponible en aquest moment"
+      },
+      "ERROR_500": {
+        "title": "ERROR 500",
+        "subtitle": "Error al servidor",
+        "text": "Probablement el problema no sigui amb el teu ordinador o connexió a internet sinó amb el servidor"
+      }
+    }
+  },
+  "messages": {
+    "headers": {
+      "success": "Èxit",
+      "warning": "Advertència",
+      "info": "Informació",
+      "error": "Error"
+    },
+    "confirmation": {
+      "message": "Vols esborrar el/la {{name}}?",
+      "header": "Confirmació d'Esborrat"
+    },
+    "toastDeleted": "El/la {{name}} ha estat esborrat correctament",
+    "toastCreated": "El/la {{name}} ha estat creat correctament",
+    "toastUpdated": "El/la {{name}} ha estat modificat correctament",
+    "toastError": "ERR"
+  },
+  "buttons": {
+    "detail": "Veure {{name}}",
+    "new": "Nou/va {{name}}",
+    "create": "Crear {{name}}",
+    "add": "Afegir {{name}}",
+    "edit": "Modificar {{name}}",
+    "update": "Modificar {{name}}",
+    "delete": "Esborrar {{name}}",
+    "send": "Enviar {{name}}",
+    "open": "Obrir",
+    "refresh": "Refrescar",
+    "reject": "No",
+    "accept": "Si",
+    "next": "Següent",
+    "previus": "Anterior"
+  },
+  "general": {
+    "reordenar": "Reordenar",
+    "opciones": "Opcions",
+    "inactive": "Inactiu/iva",
+    "active": "Actiu/iva",
+    "passwordComp": "Han de ser iguals",
+    "total": "Total",
+    "de": "de",
+    "pagina": "Pàgina",
+    "salir": "Sortir",
+    "translations": "Traduccions: {{name}}",
+    "ningunResultado": "Cap Element Trobat"
+  },
+  "tabs": {
+    "info": "Informació Principal"
+  },
+  "secciones": {
+    "informacionPrincipal": "Informació Principal"
+  },
+  "tables": {
+    "permiso": {
+      "singular": "Permís",
+      "plural": "Permisos"
+    },
+    "menu": {
+      "singular": "Menú",
+      "plural": "Menús"
+    },
+    "user": {
+      "singular": "Usuari",
+      "plural": "Usuaris"
+    },
+    "rol": {
+      "singular": "Rol",
+      "plural": "Rols"
+    }
+  },
+  "columns": {
+    "codigo": "Codi",
+    "descripcion": "Descripció",
+    "icono": "Icona",
+    "nombre": "Nom",
+    "orden": "Ordre",
+    "ruta": "Ruta",
+    "username": "Usuari",
+    "password": "Contrasenya",
+    "repeat_password": "Repetir Contrasenya",
+    "correo": "Correu",
+    "activo": "Actiu",
+    "fecAlta": "Data d'alta",
+    "fecBaja": "Data de baixa",
+    "rol": "Rol",
+    "permisos": "Permisos"
+  },
+  "calendar": {
+    "accept": "Acceptar",
+    "reject": "Cancel·la",
+    "dayNames": ["Diumenge", "Dilluns", "Martes", "Dimarts", "Dijous", "Divendres", "Dissabte"],
+    "dayNamesShort": ["diu", "dil", "mar", "dim", "dij", "div", "dis"],
+    "dayNamesMin": ["D", "L", "M", "X", "J", "V", "S"],
+    "monthNames": [
+      "Gener",
+      "Febrer",
+      "Març",
+      "Abril",
+      "Maig",
+      "Juny",
+      "Juliol",
+      "Agost",
+      "Setembre",
+      "Octubre",
+      "Novembre",
+      "Desembre"
+    ],
+    "monthNamesShort": [
+      "gen",
+      "feb",
+      "mar",
+      "abr",
+      "mai",
+      "jun",
+      "jul",
+      "ago",
+      "set",
+      "oct",
+      "nov",
+      "des"
+    ],
+    "today": "Avui",
+    "clear": "Esborrar"
+  }
+}

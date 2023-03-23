@@ -1,0 +1,9 @@
+<p-toast position="bottom-right"></p-toast>
+<p-confirmDialog
+  header="Confirmation"
+  icon="pi pi-exclamation-triangle"
+  [style]="{ width: '50vw' }"
+  [baseZIndex]="10000">
+</p-confirmDialog>
+<router-outlet *ngIf="(languagesLoading$ | async) === false"></router-outlet>
+<app-loading-data *ngIf="languagesLoading$ | async"></app-loading-data>
