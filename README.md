@@ -1,7 +1,7 @@
 
 <h1 align="center">
   <br>
-  BASE WEB & BACKOFFICE
+  SAMESOULS WEB & BACKOFFICE
   <br>
 </h1>
 
@@ -10,7 +10,6 @@
   <a href="#instalación">Instalación</a> •
   <a href="#iniciar-app">Iniciar App</a> •
   <a href="#compilar-app">Compilar App</a> •
-  <a href="#autores">Autores</a> •
   <a href="#licencia">Licencia</a>
 </p>
 
@@ -78,10 +77,6 @@
     ```sh
     npm run build:pro
     ```
-
-## Autores
-
-* [Juan Sáez García (jsaez@odec.es)](https://juamber.com/#/home)
   
 ## Licencia
 
